@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <div align="center">
   <h1>HachimiONanbayLyudou</h1>
@@ -31,6 +31,7 @@
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aoffw"><img src="https://avatars.githubusercontent.com/u/143879633?v=4?s=100" width="100px;" alt="aoffw"/><br /><sub><b>aoffw</b></sub></a><br /><a href="https://github.com/FantasyRL/HachimiONanbayLyudou/commits?author=aoffw" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/blacksheep1118"><img src="https://avatars.githubusercontent.com/u/201685640?v=4?s=100" width="100px;" alt="blacksheep1118"/><br /><sub><b>blacksheep1118</b></sub></a><br /><a href="https://github.com/FantasyRL/HachimiONanbayLyudou/commits?author=blacksheep1118" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ybdw666666"><img src="https://avatars.githubusercontent.com/u/233718726?v=4?s=100" width="100px;" alt="ybdw666666"/><br /><sub><b>ybdw666666</b></sub></a><br /><a href="https://github.com/FantasyRL/HachimiONanbayLyudou/commits?author=ybdw666666" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/richhhh151"><img src="https://avatars.githubusercontent.com/u/207650725?v=4?s=100" width="100px;" alt="richhhh151"/><br /><sub><b>richhhh151</b></sub></a><br /><a href="https://github.com/FantasyRL/HachimiONanbayLyudou/commits?author=richhhh151" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
