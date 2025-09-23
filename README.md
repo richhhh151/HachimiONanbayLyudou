@@ -1,6 +1,6 @@
 <div align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   <h1>HachimiONanbayLyudou</h1>
   <img src="./docs/img/hachimi.jpg" alt="Project Logo" width="300">
@@ -25,6 +25,9 @@
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/REREREGO"><img src="https://avatars.githubusercontent.com/u/141107695?v=4?s=100" width="100px;" alt="REREREGO"/><br /><sub><b>REREREGO</b></sub></a><br /><a href="https://github.com/FantasyRL/HachimiONanbayLyudou/commits?author=REREREGO" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nbdxwbl"><img src="https://avatars.githubusercontent.com/u/144588866?v=4?s=100" width="100px;" alt="nbdxwbl"/><br /><sub><b>nbdxwbl</b></sub></a><br /><a href="https://github.com/FantasyRL/HachimiONanbayLyudou/commits?author=nbdxwbl" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MonaranBai"><img src="https://avatars.githubusercontent.com/u/205506788?v=4?s=100" width="100px;" alt="MonaranBai"/><br /><sub><b>MonaranBai</b></sub></a><br /><a href="https://github.com/FantasyRL/HachimiONanbayLyudou/commits?author=MonaranBai" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/102301540"><img src="https://avatars.githubusercontent.com/u/164310949?v=4?s=100" width="100px;" alt="102301540"/><br /><sub><b>102301540</b></sub></a><br /><a href="https://github.com/FantasyRL/HachimiONanbayLyudou/commits?author=102301540" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
