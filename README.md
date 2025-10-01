@@ -3,12 +3,22 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <div align="center">
   <h1>HachimiONanbayLyudou</h1>
-  <img src="./docs/img/hachimi.jpg" alt="Project Logo" width="300">
+  <img src="./docs/img/LOGO.png" alt="Project Logo" width="300">
   
   <p>
      Software Engineering Group HachimiONanbayLyudou, Fuzhou University, 2025  
   </p>
 </div>
+
+**团队介绍：** 
+<div align="center">
+  <p>
+    “名为生活的大风车,我要和你大战三百回合”
+  </p>
+</div>
+我们是“哈基米噢南北绿豆”团队，（很明显，这是一个网络梗）
+脑洞可以上天，交付必须落地；抽象是皮肤，靠谱是内核。
+纵使学习过程艰难曲折，我们也会以骑士精神继续前进，完成任务。
 
 ## Contributors
 
@@ -35,6 +45,31 @@
     </tr>
   </tbody>
 </table>
+
+## Member Introduction
+
+## 郑隆熙：
+
+## 🧑‍💻 我是谁
+
+<img align="left" src="https://github.com/REREREGO.png" width="150" style="border-radius:50%"/>
+
+---
+**姓名：** 郑隆熙    
+**专业：** 计算机科学与技术（实验班）     
+**爱好：** 摄影📷、历史、科技产品  
+**学习方向:** 计算机视觉   
+**目前就读于：** 福州大学   
+**如何联系我：**  zlx.2005@qq.com   
+
+## 🏅获奖经历
+- 第16届蓝桥杯全国软件和信息技术专业人才大赛总决赛C/C++程序设计大学A组三等奖
+- 福州大学第十三届大学生软件设计与服务外包创新创业竞赛一等奖
+- 福州大学第十四届大学生软件设计与服务外包创新创业竞赛一等奖
+
+## 🎓 未来计划
+- 大概率是保研，希望能够获得较高的GPA，进入一个不错的学校
+- 如果能力足够，我希望可以在学术圈内有所发展；如果能力不足就找个班上了（大嘘）
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
