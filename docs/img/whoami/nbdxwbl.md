@@ -3,11 +3,12 @@
 
 
 👋 Hi there! Welcome to my GitHub profile.
+
 你好！欢迎来到我的 GitHub 主页。
 
 ---
 
-
+😊 Name / 姓名: yoga
 
 📧 Contact / 联系方式：2176354244@qq.com  
 
@@ -63,4 +64,5 @@ Frontend: **Basic Web Development**
 ## 🤝 Social / 交流
 
 💬  feel free to reach out and connect!
+
 💬 欢迎大家来和我交流！
