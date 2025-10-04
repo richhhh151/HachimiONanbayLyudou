@@ -1,4 +1,4 @@
-![https://github.com/richhhh151/richhhh151/commit/2204e905afe0cd31bbb07960cc2df287d8a1f042](https://github.com/richhhh151/richhhh151/blob/main/header.png)
+![[https://github.com/richhhh151/richhhh151/commit/2204e905afe0cd31bbb07960cc2df287d8a1f042](https://github.com/richhhh151/HachimiONanbayLyudou/blob/main/docs/img/header.png)](https://github.com/richhhh151/richhhh151/blob/main/header.png)
 ***你好！欢迎光临我的主页🧡💛💚***
 # ✨INTRODUCTION/Mr.Z
 - **姓名:** Mr.Z  
