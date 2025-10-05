@@ -3,7 +3,7 @@
 ---  
 
 
-![docs/img/IMG_2304.JPG](docs/img/IMG_2304.JPG) 
+![docs/img/IMG_2304.png](docs/img/IMG_2304.png)
 
 ---  
 # ✨INTRODUCTION/Mr.Z
