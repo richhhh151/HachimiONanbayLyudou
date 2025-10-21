@@ -6,7 +6,7 @@
 # 默认输出帮助信息
 .DEFAULT_GOAL := help
 # 项目 MODULE 名
-MODULE = github.com/FantasyRL/HachimiONanbayLyudou
+MODULE = github.com/FantasyRL/go-mcp-demo
 # 目录相关
 DIR = $(shell pwd)
 CMD = $(DIR)/cmd
@@ -16,7 +16,7 @@ OUTPUT_PATH = $(DIR)/output
 API_PATH= $(DIR)/cmd/api
 
 # 服务名
-SERVICES := api host server
+SERVICES := host mcp_server
 service = $(word 1, $@)
 
 # hertz HTTP脚手架
@@ -27,3 +27,12 @@ hertz-gen-api:
 	rm -rf $(DIR)/swagger; \
     thriftgo -g go -p http-swagger $(IDL_PATH)/api.thrift; \
     rm -rf $(DIR)/gen-go
+
+.PHONY: $(SERVICES)
+$(SERVICES):
+	go run $(CMD)/$(service) -cfg $(CONFIG_PATH)/config.yaml
+
+.PHONY: stdio
+stdio:
+	go build -o bin/mcp_server ./cmd/mcp_server # windows的output需要是，并且在config.stdio.yaml中修改，bin/mcp-server.exe
+	go run ./cmd/host -cfg $(CONFIG_PATH)/config.stdio.yaml
