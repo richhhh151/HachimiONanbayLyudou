@@ -1,11 +1,11 @@
 package mcp_server
 
 import (
-	"context"
+	"github.com/FantasyRL/go-mcp-demo/pkg/base/prompt_set"
+	"github.com/FantasyRL/go-mcp-demo/pkg/base/tool_set"
 	"github.com/FantasyRL/go-mcp-demo/pkg/constant"
 	"time"
 
-	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 )
 
@@ -18,7 +18,7 @@ type HTTPOpts struct {
 }
 
 // NewCoreServer 在此注册 tools/prompts/resources
-func NewCoreServer(name, version string) *server.MCPServer {
+func NewCoreServer(name, version string, toolSet *tool_set.ToolSet, promptSet *prompt_set.PromptSet) *server.MCPServer {
 	s := server.NewMCPServer(
 		name,
 		version,
@@ -26,17 +26,17 @@ func NewCoreServer(name, version string) *server.MCPServer {
 		server.WithToolCapabilities(false),
 	)
 
-	// 示例工具：time_now
-	tool := mcp.NewTool("time_now", mcp.WithDescription("返回当前时间（RFC3339）"))
-	s.AddTool(tool, func(ctx context.Context, req mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-		now := time.Now().Format(time.RFC3339)
-		return mcp.NewToolResultText(now), nil
-	})
+	for _, t := range toolSet.Tools {
+		s.AddTool(*t, toolSet.HandlerFunc[t.Name])
+	}
+	for _, p := range promptSet.Prompts {
+		s.AddPrompt(*p, promptSet.HandlerFunc[p.Name])
+	}
 
 	return s
 }
 
-// NewStreamableHTTPServer 基于核心 Server 创建 HTTP/SSE 服务器组件
+// NewStreamableHTTPServer 基于核心 Server 创建StreamableHTTP服务器组件
 func NewStreamableHTTPServer(core *server.MCPServer) *server.StreamableHTTPServer {
 	var httpOpts []server.StreamableHTTPOption
 	httpOpts = append(httpOpts, server.WithHeartbeatInterval(constant.MCPServerHeartbeatInterval))
@@ -46,4 +46,11 @@ func NewStreamableHTTPServer(core *server.MCPServer) *server.StreamableHTTPServe
 // ServeStdio stdio
 func ServeStdio(core *server.MCPServer) error {
 	return server.ServeStdio(core)
+}
+
+// NewHTTPSSEServer [MCP规范已废弃]基于核心 Server 创建 SSE 服务器组件
+func NewHTTPSSEServer(core *server.MCPServer) *server.SSEServer {
+	var sseOpts []server.SSEOption
+	sseOpts = append(sseOpts, server.WithKeepAliveInterval(constant.MCPServerHeartbeatInterval))
+	return server.NewSSEServer(core, sseOpts...)
 }
