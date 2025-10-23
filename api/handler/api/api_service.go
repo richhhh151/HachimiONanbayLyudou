@@ -4,12 +4,13 @@ package api
 
 import (
 	"context"
-	"github.com/FantasyRL/go-mcp-demo/api/pack"
-	"github.com/FantasyRL/go-mcp-demo/internal/host"
-
-	api "github.com/FantasyRL/go-mcp-demo/api/model/api"
+	"encoding/json"
+	api "github.com/FantasyRL/HachimiONanbayLyudou/api/model/api"
+	"github.com/FantasyRL/HachimiONanbayLyudou/api/pack"
+	"github.com/FantasyRL/HachimiONanbayLyudou/internal/host"
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
+	"github.com/cloudwego/hertz/pkg/protocol/sse"
 )
 
 // Chat .
@@ -31,4 +32,35 @@ func Chat(ctx context.Context, c *app.RequestContext) {
 	}
 	resp.Response = msg
 	pack.RespData(c, resp)
+}
+
+// ChatSSE .
+// @router /api/v1/chat/sse [GET]
+// in: api/handler/api/chat_sse.go
+func ChatSSE(ctx context.Context, c *app.RequestContext) {
+	var req api.ChatSSEHandlerRequest
+	if err := c.BindAndValidate(&req); err != nil {
+		c.String(consts.StatusBadRequest, err.Error())
+		return
+	}
+
+	w := sse.NewWriter(c)
+	defer w.Close()
+
+	emit := func(_ string, v any) error {
+		switch x := v.(type) {
+		case string: // 用于 [DONE]
+			return w.WriteEvent("", "", []byte(x))
+		case json.RawMessage:
+			return w.WriteEvent("", "", x)
+		default:
+			b, _ := json.Marshal(v)
+			return w.WriteEvent("", "", b)
+		}
+	}
+
+	if err := host.NewHost(ctx, clientSet).StreamChatOpenAI(ctx, 1, req.Message, emit); err != nil {
+		_ = emit("error", map[string]any{"error": err.Error()})
+		return
+	}
 }

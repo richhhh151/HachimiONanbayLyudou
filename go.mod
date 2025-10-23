@@ -1,4 +1,4 @@
-module github.com/FantasyRL/go-mcp-demo
+module github.com/FantasyRL/HachimiONanbayLyudou
 
 go 1.25.0
 
@@ -10,12 +10,15 @@ require (
 	github.com/bytedance/mockey v1.2.14
 	github.com/cloudwego/hertz v0.10.2
 	github.com/cloudwego/kitex v0.15.1
+	github.com/go-resty/resty/v2 v2.16.5
+	github.com/google/uuid v1.6.0
 	github.com/hashicorp/consul/api v1.32.1
 	github.com/hertz-contrib/cors v0.1.0
 	github.com/hertz-contrib/gzip v0.0.3
 	github.com/hertz-contrib/opensergo v0.0.1
 	github.com/hertz-contrib/swagger v0.1.1
 	github.com/mark3labs/mcp-go v0.41.1
+	github.com/openai/openai-go/v2 v2.7.1
 	github.com/redis/go-redis/v9 v9.14.0
 	github.com/smartystreets/goconvey v1.8.1
 	github.com/spf13/viper v1.20.1
@@ -46,7 +49,6 @@ require (
 	github.com/go-openapi/spec v0.20.9 // indirect
 	github.com/go-openapi/swag v0.22.4 // indirect
 	github.com/go-viper/mapstructure/v2 v2.4.0 // indirect
-	github.com/google/uuid v1.6.0 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
@@ -89,6 +91,7 @@ require (
 	github.com/tidwall/gjson v1.18.0 // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.1 // indirect
+	github.com/tidwall/sjson v1.2.5 // indirect
 	github.com/tklauser/go-sysconf v0.3.15 // indirect
 	github.com/tklauser/numcpus v0.10.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect

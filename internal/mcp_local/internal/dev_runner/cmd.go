@@ -5,7 +5,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/FantasyRL/go-mcp-demo/pkg/logger"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/logger"
 	"github.com/mark3labs/mcp-go/mcp"
 	"os/exec"
 	"strings"

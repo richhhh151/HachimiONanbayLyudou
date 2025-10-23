@@ -2,9 +2,9 @@ package host
 
 import (
 	"context"
-	"github.com/FantasyRL/go-mcp-demo/pkg/base"
-	"github.com/FantasyRL/go-mcp-demo/pkg/base/ai_provider"
-	"github.com/FantasyRL/go-mcp-demo/pkg/base/mcp_client"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/base"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/base/ai_provider"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/base/mcp_client"
 	"github.com/openai/openai-go/v2"
 )
 
@@ -14,7 +14,7 @@ var historyOpenAI = make(map[int64][]openai.ChatCompletionMessageParamUnion)
 
 type Host struct {
 	ctx           context.Context
-	mcpCli        *mcp_client.MCPClient
+	mcpCli        mcp_client.ToolClient
 	aiProviderCli *ai_provider.Client
 }
 

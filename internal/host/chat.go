@@ -2,11 +2,11 @@ package host
 
 import (
 	"context"
-	"github.com/FantasyRL/go-mcp-demo/config"
-	"github.com/FantasyRL/go-mcp-demo/pkg/base/ai_provider"
-	"github.com/FantasyRL/go-mcp-demo/pkg/constant"
-	"github.com/FantasyRL/go-mcp-demo/pkg/errno"
-	"github.com/FantasyRL/go-mcp-demo/pkg/logger"
+	"github.com/FantasyRL/HachimiONanbayLyudou/config"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/base/ai_provider"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/constant"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/errno"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/logger"
 )
 
 func (h *Host) Chat(id int64, msg string) (string, error) {

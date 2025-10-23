@@ -1,7 +1,7 @@
 package pack
 
 import (
-	"github.com/FantasyRL/go-mcp-demo/pkg/errno"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/errno"
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
 	"strconv"

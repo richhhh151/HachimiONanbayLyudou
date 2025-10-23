@@ -4,9 +4,16 @@ server:
   name: go-mcp-demo
   log-level: "INFO" # TRACE|DEBUG|INFO|NOTICE|WARN|ERROR|FATAL
 
-ollama:
-  base_url: "http://127.0.0.1:11434"
-  model: "qwen3:1.7b"
+ai_provider:
+  mode: "remote" # "local"(ollama) | "remote"(openAI-API)
+  base_url: "http://127.0.0.1:11434" # ollama 本地服务地址，仅 mode 为 local 时生效
+  #  model: "qwen3:1.7b"
+  model: "deepseek-chat"
+  remote:
+    provider: "deepseek" # "openai" | "deepseek" | ...
+    base_url: "https://api.deepseek.com/v1"
+    api_key: ""
+
   options:
     request_timeout: "30s"
     keep_alive: "5m"
@@ -23,9 +30,8 @@ cli:
 
 mcp:
   server_name: "http.mcp.demo"
-  transport: "http"  # "stdio" | "sse" | "http"
+  transport: "http"  # "stdio" | "http"
   http:
-    mode: "http"           # "sse" | "http" (Streamable HTTP)
     base_url: "http://127.0.0.1:10002/mcp"# 直连时填，例如 http://127.0.0.1:8080/mcp
   # stdio:
   #   server_cmd: "./bin/mcp-server"
@@ -48,9 +54,9 @@ services:
     name: host
     load-balance: false
     addr:
-      - 127.0.0.1:10001
-  mcp_server:
-    name: mcp-server
+      - 0.0.0.0:10001
+  mcp_local:
+    name: mcp_local
     load-balance: false
     addr:
-      - 127.0.0.1:10002
+      - 0.0.0.0:10002

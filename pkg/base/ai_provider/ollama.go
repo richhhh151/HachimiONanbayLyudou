@@ -2,7 +2,7 @@ package ai_provider
 
 import (
 	"encoding/json"
-	"github.com/FantasyRL/go-mcp-demo/config"
+	"github.com/FantasyRL/HachimiONanbayLyudou/config"
 )
 
 // ToolFunction 工具调用函数

@@ -3,11 +3,12 @@ package main
 import (
 	"context"
 	"flag"
-	"github.com/FantasyRL/go-mcp-demo/api/handler/api"
-	"github.com/FantasyRL/go-mcp-demo/api/router"
-	"github.com/FantasyRL/go-mcp-demo/config"
-	"github.com/FantasyRL/go-mcp-demo/pkg/logger"
-	"github.com/FantasyRL/go-mcp-demo/pkg/utils"
+	"github.com/FantasyRL/HachimiONanbayLyudou/api/handler/api"
+	"github.com/FantasyRL/HachimiONanbayLyudou/api/router"
+	"github.com/FantasyRL/HachimiONanbayLyudou/config"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/constant"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/logger"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/utils"
 	"time"
 
 	sentinel "github.com/alibaba/sentinel-golang/api"
@@ -22,7 +23,7 @@ import (
 )
 
 var (
-	serviceName = "host"
+	serviceName = constant.ServiceNameAPI
 	configPath  = flag.String("cfg", "config/config.yaml", "config file path")
 )
 

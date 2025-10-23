@@ -3,7 +3,7 @@
 package router
 
 import (
-	api "github.com/FantasyRL/go-mcp-demo/api/router/api"
+	api "github.com/FantasyRL/HachimiONanbayLyudou/api/router/api"
 	"github.com/cloudwego/hertz/pkg/app/server"
 )
 

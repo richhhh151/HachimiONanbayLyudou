@@ -1,8 +1,8 @@
 package mcp_local
 
 import (
-	"github.com/FantasyRL/go-mcp-demo/internal/mcp_local/internal/ai_se_solver"
-	"github.com/FantasyRL/go-mcp-demo/pkg/base/ai_provider"
+	"github.com/FantasyRL/HachimiONanbayLyudou/internal/mcp_local/internal/ai_se_solver"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/base/ai_provider"
 )
 
 func InjectDependencies() {
