@@ -31,7 +31,7 @@ func init() {
 	flag.Parse()
 	config.Load(*configPath, serviceName)
 	logger.Init(serviceName, config.GetLoggerLevel())
-	api.Init()
+	api.InitAPIClientSet()
 }
 
 func main() {
