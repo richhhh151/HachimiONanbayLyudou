@@ -1,9 +1,9 @@
 # 作业仓库链接
-## 后端
+## 后端：go-mcp-demo
 
 https://github.com/FantasyRL/go-mcp-demo
 
-## 前端
+## 前端：learning-mcp
 
 https://github.com/RealSeverj/learning-mcp
 
