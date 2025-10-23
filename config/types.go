@@ -1,6 +1,8 @@
 package config
 
-import "time"
+import (
+	"time"
+)
 
 type server struct {
 	Secret   string `mapstructure:"private-key"`
@@ -19,10 +21,18 @@ type OllamaOptions struct {
 	RequestTimout time.Duration  `mapstructure:"request_timeout"`
 }
 
-type ollamaConfig struct {
-	BaseURL string        `mapstructure:"base_url"` // e.g. http://127.0.0.1:11434
-	Model   string        `mapstructure:"model"`    // e.g. qwen3:1.7b
-	Options OllamaOptions `mapstructure:"options"`
+type AiProviderConfig struct {
+	Mode    string                 `mapstructure:"mode"`
+	BaseURL string                 `mapstructure:"base_url"` // e.g. http://127.0.0.1:11434
+	Model   string                 `mapstructure:"model"`    // e.g. qwen3:1.7b
+	Remote  AiProviderRemoteConfig `mapstructure:"remote"`
+	Options OllamaOptions          `mapstructure:"options"`
+}
+type AiProviderRemoteConfig struct {
+	Provider string `mapstructure:"provider"`
+	BaseURL  string `mapstructure:"base_url"`
+	APIKey   string `mapstructure:"api_key"`
+	Model    string `mapstructure:"model"`
 }
 
 type cliConfig struct {
@@ -39,7 +49,6 @@ type mcpStdio struct {
 }
 
 type mcpHTTP struct {
-	Mode    string `mapstructure:"mode"`     // "sse" | "http"
 	BaseURL string `mapstructure:"base_url"` // 直连时使用，如 "http://127.0.0.1:8080/mcp"
 }
 
@@ -55,8 +64,7 @@ type consulConfig struct {
 	Address    string `mapstructure:"address"`    // 例如 "127.0.0.1:8500"
 	Datacenter string `mapstructure:"datacenter"` // 可空
 	Token      string `mapstructure:"token"`      // 可空
-	Service    string `mapstructure:"service"`    // 要发现的服务名
-	Tag        string `mapstructure:"tag"`        // 可空
+	Tag        string `mapstructure:"tag"`        // mcp
 	Scheme     string `mapstructure:"scheme"`     // "http" | "https"
 	Path       string `mapstructure:"path"`       // 例如 "/mcp"
 }
@@ -67,8 +75,10 @@ type consulConfig struct {
 // - 当 Provider=static 时使用 services.* 的静态地址（见 services 配置）
 // - 当 BaseURL 非空时，优先使用 BaseURL（由 MCP 自身指定）
 type registryConfig struct {
-	Provider string       `mapstructure:"provider"` // "consul" | "none"
-	Consul   consulConfig `mapstructure:"consul"`
+	Provider        string        `mapstructure:"provider"` // "consul" | "none"
+	Consul          consulConfig  `mapstructure:"consul"`
+	RefreshInterval time.Duration `mapstructure:"refresh_interval"`
+	ResolveTimeout  time.Duration `mapstructure:"resolve_timeout"`
 }
 
 type service struct {
@@ -78,9 +88,9 @@ type service struct {
 }
 
 type Config struct {
-	Server   server         `mapstructure:"server"`
-	Ollama   ollamaConfig   `mapstructure:"ollama"`
-	CLI      cliConfig      `mapstructure:"cli"`
-	MCP      mcpConfig      `mapstructure:"mcp"`
-	Registry registryConfig `mapstructure:"registry"`
+	Server     server           `mapstructure:"server"`
+	AiProvider AiProviderConfig `mapstructure:"ai_provider"`
+	CLI        cliConfig        `mapstructure:"cli"`
+	MCP        mcpConfig        `mapstructure:"mcp"`
+	Registry   registryConfig   `mapstructure:"registry"`
 }

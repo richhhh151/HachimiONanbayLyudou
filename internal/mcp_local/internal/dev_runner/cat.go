@@ -3,7 +3,7 @@ package dev_runner
 import (
 	"context"
 	"fmt"
-	"github.com/FantasyRL/go-mcp-demo/pkg/utils"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/utils"
 	"github.com/mark3labs/mcp-go/mcp"
 )
 

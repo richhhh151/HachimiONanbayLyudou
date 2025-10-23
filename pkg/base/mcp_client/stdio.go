@@ -3,8 +3,8 @@ package mcp_client
 import (
 	"context"
 	"fmt"
-	"github.com/FantasyRL/go-mcp-demo/config"
-	"github.com/FantasyRL/go-mcp-demo/pkg/constant"
+	"github.com/FantasyRL/HachimiONanbayLyudou/config"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/constant"
 	mcpc "github.com/mark3labs/mcp-go/client"
 	"github.com/mark3labs/mcp-go/mcp"
 )

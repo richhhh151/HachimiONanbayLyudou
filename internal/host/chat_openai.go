@@ -3,9 +3,9 @@ package host
 import (
 	"context"
 	"encoding/json"
-	"github.com/FantasyRL/go-mcp-demo/config"
-	"github.com/FantasyRL/go-mcp-demo/pkg/constant"
-	"github.com/FantasyRL/go-mcp-demo/pkg/errno"
+	"github.com/FantasyRL/HachimiONanbayLyudou/config"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/constant"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/errno"
 	openai "github.com/openai/openai-go/v2"
 )
 

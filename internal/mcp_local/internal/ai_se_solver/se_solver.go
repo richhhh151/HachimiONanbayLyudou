@@ -2,8 +2,8 @@ package ai_se_solver
 
 import (
 	"context"
-	"github.com/FantasyRL/go-mcp-demo/config"
-	"github.com/FantasyRL/go-mcp-demo/pkg/base/ai_provider"
+	"github.com/FantasyRL/HachimiONanbayLyudou/config"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/base/ai_provider"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/openai/openai-go/v2"
 )
