@@ -9,7 +9,7 @@
 # 纯 Windows 环境：不强制依赖 WSL/Git Bash，默认使用 cmd，必要逻辑用 PowerShell 执行
 # 项目 MODULE 名
 MODULE = github.com/FantasyRL/HachimiONanbayLyudou
-REMOTE_REPOSITORY ?= fantasyrl/HachimiONanbayLyudou
+REMOTE_REPOSITORY ?= fantasyrl/hachimionanbaylyudou
 # 目录相关（避免在 Windows 下调用 pwd 失败，使用内置 CURDIR）
 DIR = $(CURDIR)
 CMD = $(DIR)/cmd
@@ -84,12 +84,12 @@ else
 	case "$*" in \
 		host) PORT_FLAGS="-p 10001:10001" ;; \
 		mcp_local) PORT_FLAGS="-p 10002:10002" ;; \
+		mcp_remote) PORT_FLAGS="-p 10003:10003" ;; \
 		*) PORT_FLAGS="" ;; \
 	esac; \
 	docker run --rm -itd \
 		--name $* \
-		--network $(DOCKER_NET) \
-		--network-alias $* \
+		--network host \
 		$$PORT_FLAGS \
 		-e SERVICE=$* \
 		-e TZ=Asia/Shanghai \

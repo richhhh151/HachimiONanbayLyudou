@@ -7,6 +7,6 @@ import (
 
 var clientSet *base.ClientSet
 
-func Init() {
+func InitAPIClientSet() {
 	clientSet = base.NewClientSet(base.WithMCPClient([]string{constant.ServiceNameMCPLocal, constant.ServiceNameMCPRemote}), base.WithAiProviderClient())
 }

@@ -5,16 +5,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/FantasyRL/HachimiONanbayLyudou/config"
-	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/constant"
-	"sort"
-	"sync"
-	"time"
-
 	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/base/registry"
+	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/constant"
 	"github.com/FantasyRL/HachimiONanbayLyudou/pkg/logger"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/openai/openai-go/v2"
 	"github.com/openai/openai-go/v2/packages/param"
+	"sort"
+	"sync"
+	"time"
 )
 
 // AggregatedClient 面向 Host 的多路聚合客户端，实现 ToolClient 接口
